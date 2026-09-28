@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* This storefront is styled as a light-theme UI throughout (Header,
+   product cards, checkout, etc. all use explicit light Tailwind colors) —
+   no dark-mode variants were built for any of it, so we don't auto-switch
+   the base page colors on prefers-color-scheme: dark. Doing so used to
+   fight the light `bg-slate-50`/`text-slate-900` set on <body>, since this
+   plain rule sits outside Tailwind's utility layer and wins regardless of
+   specificity. */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
