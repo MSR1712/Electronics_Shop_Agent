@@ -1,0 +1,17 @@
+# Secrets — never commit real API keys. Copy .env.example -> .env locally.
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated/local data — regenerate via scripts/ (see README setup steps)
+chroma_data/
+electronics_shop.db
+langgraph_checkpoints.sqlite
+data/.mouser_import_checkpoint.json
+
+# Web (Next.js) — web/.gitignore already covers node_modules, .next,
+# web/.env*, *.tsbuildinfo, next-env.d.ts for anything run from web/
