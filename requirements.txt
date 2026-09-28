@@ -1,0 +1,38 @@
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=2.0.0
+langchain>=0.3.0
+langchain-google-genai>=2.0.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+chromadb>=0.5.0
+langchain-chroma>=0.1.4
+# Local embeddings (no API quota/cost) use chromadb's bundled ONNX MiniLM-L6
+# model directly — see rag/vectorstore.py. No extra package needed.
+
+sqlalchemy>=2.0.0
+# psycopg2-binary intentionally omitted — SQLite ships with Python's
+# standard library. Add psycopg2-binary back if you move to Postgres.
+
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Voice (interfaces/voice_app.py, api/routers/voice.py) — Deepgram for
+# streaming STT, ElevenLabs for streaming TTS; sounddevice for raw
+# mic/speaker access locally. See interfaces/voice_engine.py.
+deepgram-sdk>=7.10.0
+elevenlabs>=2.68.0
+sounddevice
+
+streamlit>=1.38.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+itsdangerous>=2.2.0
+bcrypt>=4.0.0
+email-validator>=2.0.0
+
+slack_sdk>=3.31.0
+tavily-python>=0.5.0
+
+# Tests
+pytest>=8.0.0
